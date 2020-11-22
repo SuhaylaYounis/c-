@@ -1,0 +1,16 @@
+#include <iostream>   //program to swap two numbers using pointers
+using namespace std;
+void swap(int* x, int* y)  // creating a swap function with variables x, y
+{
+    int temp = *x;
+    *x = *y;
+    *y = temp;
+}
+int main()
+{
+    int n1 = 4, n2 = 10; //declaring the values of first and second number
+    cout << "First number= " << n1 << " , Second number= " << n2 << '\n'; //printing the numbers before swapping values
+    swap(&n1, &n2); //calling the swap function
+    cout << "First number= " << n1 << ", Second number= " << n2 << '\n';  //printing the two numbers after swapping
+
+}
