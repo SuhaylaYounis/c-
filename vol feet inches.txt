@@ -1,0 +1,29 @@
+#include <iostream> //program to get volume of a room in feet
+using namespace std;
+struct Distance  //making a stucture called distance
+{
+    int feet; //declaring datatype of feet
+    float inches;  //declaring data type of inches
+};
+struct Volume  //making a structure called volume
+{
+    Distance length; //declaring data type of length
+    Distance width;  //declaring data type of width
+    Distance height; //declaring data type of height
+};
+
+int main()
+{
+    Volume room; //define room
+    cout << "Input length (feet, inches)"; //prompt user to enter length in feet and inches 
+    cin >> room.length.feet >> room.length.inches;
+    cout << "Input width(feet, inches)";   //prompt user to enter width in feet and inches 
+    cin >> room.width.feet >> room.width.inches;
+    cout << "Input height (feet, inches)"; //prompt user to enter height in feet and inches 
+    cin >> room.height.feet >> room.height.inches;
+    float length = room.length.feet + room.length.inches/12; //convert length
+    float width = room.width.feet + room.width.inches / 12; //convert width
+    float height = room.height.feet + room.height.inches / 12; //convert height
+    cout << "The volume of room is " << length * width * height << "foot"; //display the volume of the room into console screen
+    return 0;
+}
